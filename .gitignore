@@ -7,11 +7,6 @@
 __pycache__
 db.sqlite3
 *.sqlite3
-proyecto/db/declaraciones/data/
-proyecto/declaraciones/media/declaraciones/
-proyecto/declaraciones/media/declaracion_fiscal/
-proyecto/declaraciones/media/reportes/
-proyecto/declaraciones/declaraciones/settings.py
 core/__pycache__
 # Enviroments #
 .env
@@ -33,7 +28,7 @@ venv.bak/
 **/migrations/**
 !**/migrations
 !**/migrations/__init__.py
-**/__init__.py
+#**/__init__.py
 
 
 # penv
