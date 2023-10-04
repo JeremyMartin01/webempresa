@@ -20,7 +20,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'core',
-    'services.apps.ServicesConfig'
+    'services.apps.ServicesConfig',
+    'social.apps.SocialConfig',
 ]
 # Middleware de internacionalización
 
