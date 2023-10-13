@@ -21,8 +21,8 @@
 
   <body>
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
-      <span class="site-heading-lower">La Caffettiera</span>
+      <span class="site-heading-upper text-primary mb-3">Café Soluble Nescafé Reserva Oaxaca</span>
+      <span class="site-heading-lower">Oahan</span>
     </h1>
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -58,33 +58,39 @@
     {% block content %} {% endblock %}
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
-      <div class="container">
+      <div class="container">       
         <p class="m-0">
-	        <a href="#" class="link">
+          {% if Link_Twitter %}
+	        <a href="{{Link_Twitter}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
-	        <a href="#" class="link">
+          {% endif %}
+          {% if Link_Facebook %}
+	        <a href="{{Link_Facebook}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
-	        <a href="#" class="link">
+          {% endif %}
+          {% if Link_Instagram %}
+	        <a href="{{Link_Instagram}}" class="link">
 	          <span class="fa-stack fa-lg">
 	            <i class="fa fa-circle fa-stack-2x"></i>
 	            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
 	          </span>
 	        </a>
+          {% endif %}
 	    </p>
         <p class="m-0 mbt">
         	<a href="sample.html" class="link">Política de privacidad</a> ·
         	<a href="sample.html" class="link">Aviso legal</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		  </p>
-        <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+        <p class="m-0 mbt1">&copy; Oahan 2023</p>
       </div>
 	  </footer>
     <!-- Bootstrap -->
