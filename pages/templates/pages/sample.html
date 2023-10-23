@@ -14,7 +14,14 @@
             <h2 class="section-heading mb-4">
               <span class="section-heading-lower">{{page.title}}</span>
             </h2>
-            <div class="section-content">{{page.content|linebreaks}}</div>
+            <!--Plantilla: 'admin:App_Model_Action' obj.id-->
+            <!--admin:pages_page_change' page.id-->
+            <div class="section-content">
+              {{page.content|safe}}
+              {%if user.is_authenticated and user.is_superuser%}
+              <p><a href="{% url 'admin:pages_page_change' page.id %}">Editar</a></p>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
@@ -22,3 +29,5 @@
   </div>
 </section>
 {% endblock %}
+<!--1218 Enviar Email
+No se ha actualizado el sistema SI DECLARA SESAJ del Municipio de Tomatlán, Jalisco desde que se instalo y se requiere el apoyo técnico para hacerlo-->

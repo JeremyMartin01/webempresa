@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -87,7 +86,11 @@
 	    </p>
         <p class="m-0 mbt">
           {% load pages_extras %}
-          {% get_page_list %}
+          <!--Transformarlo en una lista real donde lo podemos recorrer con un for-->
+          {% get_page_list as page_list%} <!--get_page_list = templatetag as page_list =  variables-->
+          {%for page in page_list%} <!--Aqui lo recorremos con un for-->
+          <a href="{% url 'page' page.id  page.title|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}.{%endif%} 
+          {% endfor %}
 		  </p>
         <p class="m-0 mbt1">&copy; Oahan 2023</p>
       </div>
@@ -96,5 +99,4 @@
     <script src="{% static 'core/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
   </body>
-
 </html>
